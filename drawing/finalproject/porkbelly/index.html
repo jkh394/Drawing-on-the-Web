@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Korean BBQ</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="./media/raw.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <button id="recipeBtn">
+      <img src="./media/menu.png" width="150">
+    </button>
+    
+
+    <div id="recipeModal" class="modal">
+        <div class="card">
+          <div class="header">
+          </div>
+          <div class="text">
+             <h1 class="food"></h1>
+             <i class="fa fa-clock-o"></i>
+             <i class="fa fa-users"></i>
+             <h2 class="info"><hr />Ingredients:</h2>
+             <p class="info">
+              <ul class="info scroll"></ul>
+            </p>
+          </div>
+          <a href="#" class="btn close">Close</a>
+       </div>
+    </div>
+
+    <div id="check">
+      <a href="../index.html"><img src="media/check.png" width="200"/></a>
+    </div>
+
+    <div id="sauces">
+      <img src="./media/sauce.png" width="120">
+      <img src="./media/sauce2.png" width="120">
+    </div>
+
+    <div id="rice">
+      <img src="./media/rice.png" width="450">
+    </div>
+
+    <div id="lettuce">
+      <img src="./media/lettuce.png" width="350">
+    </div>
+
+    <div id="plate">
+      <img src="./media/plate.png" width="300">
+    </div>
+
+    <div id="grill2">
+      <img src="./media/grill2.svg" width="410">
+    </div>
+
+    <div id="grill">
+      <img src="./media/grill.svg" width="450">
+    </div>
+
+    <div id="plate2">
+      <img src="./media/plate2.png" width="300">
+    </div>
+
+    <div class="raw">
+      <div id="raw1">
+        <audio controls style="display: none;">
+          <source src="./media/sizzle.mp3" type="audio/mpeg">
+        </audio>
+        <img src="./media/raw.png" width="150" data-time="0">
+      </div>
+      <div id="raw2">
+        <audio controls style="display: none;">
+          <source src="./media/sizzle.mp3" type="audio/mpeg">
+        </audio>
+        <img src="./media/raw.png" width="150" data-time="0">
+      </div>
+      <div id="raw3">
+        <audio controls style="display: none;">
+          <source src="./media/sizzle.mp3" type="audio/mpeg">
+        </audio>
+        <img src="./media/raw.png" width="150" data-time="0">
+      </div>
+    </div>
+
+    <div id="flame"></div>
+
+    <audio controls autoplay loop id="restaurant">
+      <source src="./media/restaurant.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

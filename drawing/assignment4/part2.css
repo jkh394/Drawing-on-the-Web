@@ -1,0 +1,127 @@
+@font-face {
+  font-family: wishline;
+  src: url('wishline/Wishline.otf');
+}
+
+body {
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2836cb-5893-4a6c-b156-5a89d94fc721/dce5xwb-831f37b5-e5cd-43fb-9f09-dcdd09303546.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvY2YyODM2Y2ItNTg5My00YTZjLWIxNTYtNWE4OWQ5NGZjNzIxXC9kY2U1eHdiLTgzMWYzN2I1LWU1Y2QtNDNmYi05ZjA5LWRjZGQwOTMwMzU0Ni5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.X5kZcT9D54wBroy2gX1bYbPnahHeZwK7gYTh7z1AwTY');
+  background-size: cover;
+  background-color: black;;
+  transform: scaleX(-1);
+  overflow: hidden;
+}
+
+#celeste {
+  z-index: 2;
+  width: 105%;
+}
+
+audio {
+  transform: scaleX(-1);
+  margin-top: 50%;
+  margin-left: 100px;
+  position: absolute;
+  z-index: 3;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  opacity: 0.5;
+}
+
+audio:hover {
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  opacity: 1;
+}
+
+a {
+  transform: scaleX(-1);
+  margin-top: 16%;
+  margin-left: 18%;
+  position: absolute;
+  z-index: 3;
+  color: black;
+  font-family: wishline;
+  font-size: 25pt;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffa371, 0 0 40px #ffa371, 0 0 50px #ffa371, 0 0 60px #ffa371, 0 0 70px #ffa371;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+a:hover {
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  opacity: 1;
+}
+
+@keyframes rotate {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+
+.scene {
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+  perspective-origin: top right;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.star {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.pyramid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  border-width: 100px 50px;
+  border-style: solid;
+  opacity: 0.3;
+}
+
+.pyramid > div:nth-child(1) {
+  border-color: transparent transparent white transparent;
+  transform: rotateX(30deg);
+}
+
+.pyramid > div:nth-child(2) {
+  border-color: transparent transparent white transparent;
+  transform: rotateX(-30deg);
+}
+
+.pyramid > div:nth-child(3) {
+  border-color: transparent transparent white transparent;
+  transform: rotateY(90deg) rotateX(30deg);
+}
+
+.pyramid > div:nth-child(4) {
+  border-color: transparent transparent white transparent;
+  transform: rotateY(90deg) rotateX(-30deg);
+}
+
+.pyramid > div:nth-child(5) {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transform: rotateX(90deg) translateZ(-135px);
+  opacity: 0.3;
+}
+
+.inverted {
+  transform: rotateY(40deg) rotateX(180deg) translateY(-230px);
+}

@@ -1,0 +1,207 @@
+<!-- browser window: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_browser_window2 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+    /* The browser window */
+    .window {
+    border: 6px solid #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0 10px 0 10px;
+    position: fixed;
+    width: 98%;
+    height: 100%;
+
+    }
+
+    /* Container for columns and the top "toolbar" */
+    .toolbar {
+    padding: 10px;
+    background: #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0px;
+    position: fixed;
+    width: 97%;
+    }
+
+    /* Create three unequal columns that floats next to each other */
+    .column {
+    float: left;
+    }
+
+    .left {
+    width: 15%;
+    }
+
+    .right {
+    width: 10%;
+    }
+
+    .middle {
+    width: 75%;
+    }
+
+    /* Clear floats after the columns */
+    .toolbar:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Three dots */
+    .dot {
+    margin-top: 4px;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    }
+
+    /* Style the input field */
+    input[type=text] {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    margin-top: -8px;
+    height: 25px;
+    color: #666;
+    padding: 5px;
+    }
+
+    /* Three bars (hamburger menu) */
+    .bar {
+    width: 17px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 3px 0;
+    display: block;
+    }
+
+    /* Page content */
+    .content {
+      padding: 0 70px 0 70px;
+      max-height: 10%;
+    }
+
+    .note {
+      background-image: url("note.png");
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="window">
+      <div class="toolbar">
+        <div class="column left">
+          <span class="dot" style="background:#ED594A;"></span>
+          <span class="dot" style="background:#FDD800;"></span>
+          <span class="dot" style="background:#5AC05A;"></span>
+        </div>
+        <div class="column middle">
+          <input type="text" value="http://www.drawingontheweb.com/jkh394">
+        </div>
+        <div class="column right">
+          <div style="float:right">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h1 class="jumbotron-heading pt-5">✏️Welcome to Joanne Han's Portfolio!</h1>
+      <p class="lead text-muted">Below are the assignments for Drawing on the Web led by Professor Clayton.</p>
+    </div>
+
+
+    <div class="card-group content">
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">HTML & CSS</h3>
+            <a href="./assignment1" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">SVG</h3>
+            <a href="./assignment2" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">CSS Animation</h3>
+            <a href="./assignment3" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">JavaScript</h3>
+            <a href="./assignment4/part1.html" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">Web APIs</h3>
+            <a href="./assignment5" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">HTML Canvas</h3>
+            <a href="./assignment6" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">WebGL</h3>
+            <a href="./assignment7" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body note text-center">
+            <h3 class="card-text">Final Project</h3>
+            <a href="./finalproject" class="btn btn-primary"> View </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+
+</html>

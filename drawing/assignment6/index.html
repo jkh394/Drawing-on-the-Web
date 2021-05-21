@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- toggle HTML from codepen: https://codepen.io/himalayasingh/pen/eaejBQ -->
+    <div id="toggle">
+      <input type="checkbox" id="toggle_checkbox">
+
+      <label for="toggle_checkbox">
+        <div id="star">
+          <div class="star" id="star-1">★</div>
+          <div class="star" id="star-2">★</div>
+        </div>
+        <div id="moon"></div>
+      </label>
+    </div>
+
+    <div style="display: none">
+      <video muted="" autoplay="" loop="" playsinline="" src="rain.mp4"></video>
+    </div>
+
+    <div id="frame">
+      <canvas id="c1" width="600" height="400"></canvas>
+      <canvas id="c2" width="600" height="400"></canvas>
+      <canvas id="c3" width="600" height="400"></canvas>
+      <canvas id="c4" width="600" height="400"></canvas>
+      <canvas id="c5" width="600" height="400"></canvas>
+    </div>
+
+    <script>
+      const canvas1 = document.querySelector('#c1');
+      const canvas2 = document.querySelector('#c2');
+      const canvas3 = document.querySelector('#c3');
+      const canvas4 = document.querySelector('#c4');
+      const canvas5 = document.querySelector('#c5');
+      const context1 = canvas1.getContext('2d');
+      const context2 = canvas2.getContext('2d');
+      const context3 = canvas3.getContext('2d');
+      const context4 = canvas4.getContext('2d');
+      const context5 = canvas5.getContext('2d');
+
+      let width;
+      let height;
+
+      // set the number of canvas pixels, scaled for screen resolution
+      let pxScale = window.devicePixelRatio;
+
+      const video = document.querySelector('video');
+
+      let scale1 = 1;
+      let scale2 = 0.5;
+      let scale3 = 1;
+      let scale4 = 0.5;
+
+      let daytime = true;
+
+      function setup() {
+        video.play();
+
+        // fixed canvas size
+        width = canvas1.width;
+        height = canvas1.height;
+
+        // set the CSS display size
+        canvas1.style.width = width + 'px';
+        canvas1.style.height = height + 'px';
+        canvas2.style.width = width + 'px';
+        canvas2.style.height = height + 'px';
+        canvas3.style.width = width + 'px';
+        canvas3.style.height = height + 'px';
+        canvas4.style.width = width + 'px';
+        canvas4.style.height = height + 'px';
+        canvas5.style.width = width + 'px';
+        canvas5.style.height = height + 'px';
+
+        canvas1.width = width * pxScale;
+        canvas1.height = height * pxScale;
+        canvas2.width = width * pxScale;
+        canvas2.height = height * pxScale;
+        canvas3.width = width * pxScale;
+        canvas3.height = height * pxScale;
+        canvas4.width = width * pxScale;
+        canvas4.height = height * pxScale;
+        canvas5.width = width * pxScale;
+        canvas5.height = height * pxScale;
+
+        // normalize the coordinate system
+        context1.scale(pxScale, pxScale);
+        context2.scale(pxScale, pxScale);
+        context3.scale(pxScale, pxScale);
+        context4.scale(pxScale, pxScale);
+        context5.scale(pxScale, pxScale);
+
+        drawRipples1();
+        setTimeout(drawRipples2, 1000);
+        setTimeout(drawRipples3, 2000);
+        drawRain();
+      }
+
+      function drawRipples1() {
+        context1.clearRect(0, 0, width, height);
+        context2.clearRect(0, 0, width, height);
+        context3.clearRect(0, 0, width, height);
+
+        let radius = 20;
+        let alpha = 1;
+        let red;
+        let green;
+        let blue;
+        if (daytime) {
+          green = 159;
+          red = 125;
+          blue = 189;
+        } else {
+          green = 225;
+          red = 225;
+          blue = 225;
+        }
+
+        context1.save();
+        context1.scale(scale1, scale1);
+        let x1 = (width / scale1) / 1.5;
+        let y1 = (height / scale1) / 1.5;
+        context1.beginPath();
+        context1.ellipse(x1, y1, radius, radius, 0, 0, 2 * Math.PI);
+        context1.strokeStyle = 'rgba(' + red + ',' + green + ',' + blue + ',' + alpha + ')';
+        context1.stroke();
+        if (scale1 < 20) {
+          if (!daytime) scale1 += 0.2;
+          else scale1 += 0.1;
+        } else {
+          scale1 = 0;
+        }
+        context1.restore();
+
+        context2.save();
+        context2.scale(scale2, scale2);
+        let x2 = (width / scale2) / 1.5;
+        let y2 = (height / scale2) / 1.5;
+        context2.beginPath();
+        context2.ellipse(x2, y2, radius, radius, 0, 0, 2 * Math.PI);
+        context2.strokeStyle = 'rgba(' + red + ',' + green + ',' + blue + ',' + alpha + ')';
+        context2.stroke();
+        if (scale2 < 10) {
+          if (!daytime) scale2 += 0.1;
+          else scale2 += 0.05;
+        } else {
+          scale2 = 0;
+        }
+        context2.restore();
+
+        requestAnimationFrame(drawRipples1);
+      }
+
+      function drawRipples2() {
+        context3.clearRect(0, 0, width, height);
+
+        let radius = 20;
+
+        let alpha = 1;
+        let red;
+        let green;
+        let blue;
+        if (daytime) {
+          green = 159;
+          red = 125;
+          blue = 189;
+        } else {
+          green = 225;
+          red = 225;
+          blue = 225;
+        }
+
+        context3.save();
+        context3.scale(scale3, scale3);
+        let x3 = (width / scale3) / 2.5;
+        let y3 = (height / scale3) / 2.5;
+        context3.beginPath();
+        context3.ellipse(x3, y3, radius, radius, 0, 0, 2 * Math.PI);
+        context3.strokeStyle = 'rgba(' + red + ',' + green + ',' + blue + ',' + alpha + ')';
+        context3.stroke();
+        if (scale3 < 17) {
+          if (!daytime) scale3 += 0.1;
+          else scale3 += 0.05;
+        } else {
+          scale3 = 0;
+        }
+        context3.restore();
+
+        requestAnimationFrame(drawRipples2);
+      }
+
+      function drawRipples3() {
+        context4.clearRect(0, 0, width, height);
+
+        let radius = 20;
+
+        let alpha = 1;
+        let red;
+        let green;
+        let blue;
+        if (daytime) {
+          green = 159;
+          red = 125;
+          blue = 189;
+        } else {
+          green = 225;
+          red = 225;
+          blue = 225;
+        }
+
+        context4.save();
+        context4.scale(scale4, scale4);
+        let x4 = (width / scale4) / 1.5;
+        let y4 = (height / scale4) / 2.5;
+        context4.beginPath();
+        context4.ellipse(x4, y4, radius, radius, 0, 0, 2 * Math.PI);
+        context4.strokeStyle = 'rgba(' + red + ',' + green + ',' + blue + ',' + alpha + ')';
+        context4.stroke();
+        if (scale4 < 10) {
+          if (!daytime) scale4 += 0.1;
+          else scale4 += 0.05;
+        } else {
+          scale4 = 0;
+        }
+        context4.restore();
+
+        requestAnimationFrame(drawRipples3);
+      }
+
+      function drawRain() {
+        context5.drawImage(video, 0, 0, width, height);
+
+        if (!daytime) {
+          let imageData = context5.getImageData(0, 0, width*2, height*2);
+
+          for (let y = 0; y < imageData.height; y++) {
+            for (let x = 0; x < imageData.width; x++) {
+              let index = (x + y * imageData.width) * 4; // index position of every pixel
+
+              let r = imageData.data[index + 0]; // red
+              let g = imageData.data[index + 1]; // green
+              let b = imageData.data[index + 2]; // blue
+              let a = imageData.data[index + 3]; // alpha
+
+              let averageColour = (r + g + b) / 3;
+              imageData.data[index + 0] = averageColour;
+              imageData.data[index + 1] = averageColour;
+              imageData.data[index + 2] = averageColour;
+            }
+          }
+          context5.putImageData(imageData, 0, 0);
+        }
+
+        requestAnimationFrame(drawRain);
+      }
+
+      const toggle = document.querySelector('#toggle_checkbox');
+      toggle.addEventListener('click', function() {
+        if (daytime) {
+          daytime = false;
+          canvas1.style.backgroundColor = 'black';
+        } else {
+          daytime = true;
+          canvas1.style.backgroundColor = 'white';
+        }
+      })
+
+      window.addEventListener("load", setup);
+    </script>
+  </body>
+</html>

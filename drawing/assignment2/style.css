@@ -1,0 +1,57 @@
+@font-face {
+  font-family: KGALittleSpark;
+  src: url(KGALittleSpark.ttf);
+}
+
+body {
+  font-family: KGALittleSpark;
+  background: url("background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+p {
+  margin-top: -50px;
+  font-size: 200%;
+}
+
+#root {
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px gray;
+  margin-bottom: 50px;
+}
+
+.symbols {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+svg.kiki:hover {
+  fill: #f3b7ac;
+}
+
+svg.tombo:hover {
+  fill: #dfe8c9;
+}
+
+svg.lily:hover {
+  fill: #eadbce;
+}
+
+svg.jiji:hover {
+  fill: #8e8c8f;
+}
+
+svg.broom:hover {
+  fill: #bd5e41;
+}

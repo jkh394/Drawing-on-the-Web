@@ -1,0 +1,217 @@
+@font-face {
+    font-family: Korean_Calligraphy;
+    src: url(../korean_calligraphy/Korean_Calligraphy.ttf);
+}
+
+body {
+    background-color: #E8ACB8;
+    display: grid;
+    grid-template-columns: 30% 50% auto;
+    grid-template-rows: 10% auto auto;
+    overflow: hidden;
+}
+
+#scroll {
+    position: fixed;
+    max-height: 100%;
+    width: 100%;
+    overflow: scroll;
+    z-index: 3;
+}
+
+#scroll::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+#scroll::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+#scroll2 {
+    min-height: 500vh;
+}
+
+#recipeBtn {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: flex-start;
+    justify-self: center;
+    transform: translateY(50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    z-index: 3;
+}
+  
+#recipeBtn:hover {
+    transform: scale(1.1) translateY(50%);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .card {
+    position: relative;
+    background: #fff;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 30px 2px #000;
+  }
+  .card .header {
+    min-height: 250px;
+  }
+  .card .header .icon a .fa-heart-o {
+    position: absolute;
+    left: 85%;
+    bottom: 30.7%;
+    background: #17bebb;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 30px 1px #17bebb;
+  }
+  .card .text .food {
+    color: #212129;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 5px 30px;
+    font-family: Korean_Calligraphy;
+  }
+  .card .text .fa-clock-o {
+    color: #9b9b9b;
+    margin: 0 30px;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card .text .fa-users {
+    color: #9b9b9b;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card .stars {
+    margin: 10px 30px;
+  }
+  .card .stars li a i {
+    color: #ffe500;
+  }
+  .card .info {
+    margin: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .scroll {
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+  .scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+  }
+  /* Track */
+  .scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  } 
+  /* Handle */
+  .scroll::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  /* Handle on hover */
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .card a.btn {
+    display: block;
+    background: #ef3e36;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 10px;
+    transition: 250ms;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card a.btn:hover {
+    background: #c4e6e5;
+    transition: 250ms;
+  }
+
+#ramen {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    justify-content: center;
+    transform: translateY(-80%) translateX(5%);
+}
+
+#check {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-content: center;
+    transform: translateX(20%) translateY(-5%);
+    z-index: 3;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#check:hover {
+    transform: scale(1.1) translateX(20%);
+}
+
+#noodles {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    transform: translateY(50%) translateX(-20%);
+    z-index: -1;
+}
+
+#svg {
+    margin-left: 30%;
+}
+
+#chopstick1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#chopstick2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    z-index: -2;
+}
+
+#smoke {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    z-index: 2;
+    mix-blend-mode: screen;
+}

@@ -1,0 +1,131 @@
+@font-face {
+  font-family: wishline;
+  src: url('wishline/Wishline.otf');
+}
+
+@keyframes rotate {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+
+@keyframes fade {
+  0% {opacity: 0;}
+  40% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+body {
+  font-family: wishline;
+  background: url('https://studio.code.org/v3/assets/ZzlOVjYe2VUBSSkrfA-STogqt4eNZP5jCQ7Z6YBRmcM/space.gif');
+  background-color:black;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 180px;
+  margin-bottom: -50px;
+  font-size: 50px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffa371, 0 0 40px #ffa371, 0 0 50px #ffa371, 0 0 60px #ffa371, 0 0 70px #ffa371;
+}
+
+.row {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'wishline';
+}
+
+.scene {
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+  perspective-origin: top right;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.star {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.pyramid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  border-width: 100px 50px;
+  border-style: solid;
+  opacity: 0.3;
+}
+
+.pyramid > div:nth-child(1) {
+  border-color: transparent transparent white transparent;
+  transform: rotateX(30deg);
+}
+
+.pyramid > div:nth-child(2) {
+  border-color: transparent transparent white transparent;
+  transform: rotateX(-30deg);
+}
+
+.pyramid > div:nth-child(3) {
+  border-color: transparent transparent white transparent;
+  transform: rotateY(90deg) rotateX(30deg);
+}
+
+.pyramid > div:nth-child(4) {
+  border-color: transparent transparent white transparent;
+  transform: rotateY(90deg) rotateX(-30deg);
+}
+
+.pyramid > div:nth-child(5) {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transform: rotateX(90deg) translateZ(-135px);
+  opacity: 0.3;
+}
+
+.inverted {
+  transform: rotateY(40deg) rotateX(180deg) translateY(-230px);
+}
+
+button {
+  font-family: 'wishline';
+  z-index: 1;
+  font-size: 30pt;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  outline: none;
+  border: transparent;
+  border: 5px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0 -10px 16px 0 rgba(255, 255, 255, 0.5), 0 17px 50px 0 rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+a {
+  color: white;
+  font-size: 25pt;
+  position: relative;
+  top: 50px;
+  right: 170px;
+  z-index: 1;
+}

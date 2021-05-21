@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Korean_Calligraphy;
+    src: url(./korean_calligraphy/Korean_Calligraphy.ttf);
+}
+
+body {
+    display: grid;
+    grid-template-columns:20vw 800px auto;
+    grid-template-rows: auto auto auto;
+    background-color: #FDE200;
+    font-family: Korean_Calligraphy;
+    overflow: hidden;
+}
+
+#street {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#crowd {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    z-index: 2;
+    mix-blend-mode: screen;
+    overflow:hidden; /*hide bounds of image */
+    margin:0 0;
+    opacity: 50%;
+}
+
+#crowd > img {
+    margin: 0 -20.875%;
+}
+
+#gimbap {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    z-index: 3;
+    margin-left: 665px;
+    /* margin-left: 48.5vw; */
+}
+
+#gimbap > a > img:hover {
+    border: 5px solid black;
+}
+
+#ramen {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    z-index: 3;
+    margin-left: 570px;
+}
+
+#ramen > a > img:hover {
+    border: 5px solid black;
+}
+
+#bbq {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    z-index: 3;
+    margin-left: 150px;
+    margin-top: 110px;
+}
+
+#bbq > a > img:hover {
+    border: 5px solid black;
+}
+
+#title {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: large;
+}
+
+#footnote {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    margin-top: -23vh;
+    text-align: right;
+}

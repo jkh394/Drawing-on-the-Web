@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebGL</title>
+    <style>
+      body {
+        position: relative;
+      }
+
+      #drawing {
+      }
+
+      #background {
+        position: absolute;
+        background-color: #fbd3bc;
+        margin-top: -1vh;
+        margin-left: -1vw;
+      }
+
+      #text {
+        z-index: 2;
+        position: absolute;
+      }
+
+      #foreground {
+        z-index: 3;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="foreground"></canvas>
+    <canvas id="background"></canvas>
+
+    <div style="display: none">
+      <canvas id="drawing" width="200" height="200"></canvas>
+      <video muted autoplay loop playsinline></video>
+    </div>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/cam-depth-map.js"></script>
+  </body>
+</html>

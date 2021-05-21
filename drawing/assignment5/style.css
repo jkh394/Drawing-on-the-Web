@@ -1,0 +1,80 @@
+#us-map{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin-top: 90vh;
+  margin-left: 5vw;
+}
+path:hover {
+  stroke: #80982A!important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #80982A !important;
+  cursor: pointer;
+}
+#path67 {
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
+}
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  font-family: arial;
+  color: black;
+  font-size: 16pt;
+  text-shadow: 1px 1px 1px#999999;
+}
+
+#data {
+  z-index: 2;
+  overflow: hidden;
+  height: 30vh;
+}
+.bar {
+  width: 0.1%;
+  height: 100%;
+  transition: all 3s ease 0s;
+  transform-origin: left;
+}
+.d {background-color: #007c92;}
+.p {background-color: #b96e12;}
+.h {background-color: #556222;}
+.test {
+  display: flex;
+  align-content: flex-start;
+  margin-top: 3px;
+}
+.label {
+  margin-top: 5%;
+  z-index: 3;
+  color: black;
+  text-shadow: 1px 1px 1px#999999;
+}
+.hidden {
+  display: none;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.display {
+  display: block;
+}
+.card {
+  width: 50%; 
+  margin-top: 10%; 
+  margin-left: 20%;
+}
+#close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

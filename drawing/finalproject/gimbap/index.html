@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gimbap</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="./media/piece.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <div id="start">
+      <h1 class="nonModal">Gimbap Grab!</h1>
+      <div id="easy">
+        <img id="eimg" src="media/piece.png" width="100"/>
+        <h2 id="elabel">Easy</h2>
+      </div>
+      <div id="medium">
+        <img src="media/piece.png" width="100"/>
+        <h2 id="mlabel">Medium</h2>
+      </div>
+      <div id="hard">
+        <img src="media/piece.png" width="100"/>
+        <h2 id="hlabel">Hard</h2>
+      </div>
+      <div id="plate">
+        <img src="media/plate.jpg" width="600"/>
+      </div> 
+    </div>
+    
+    <div id="finish" style="display: none;">
+      <h1 class="nonModal">Your Score:</h1>
+      <div id="finalScore">
+        <h1 class="nonModal">1 secs</h1>
+      </div>
+      <div id="playAgain">
+        <img src="media/piece.png" width="100"/>
+        <h2 id="plabel">Play Again</h2>
+      </div>
+      <div id="plate">
+        <img src="media/plate.jpg" width="600"/>
+      </div> 
+    </div>
+
+    <!-- <div id="scene">
+      <div id="cylinderBase">
+        <div class="top circle"></div>
+        <div class="bottom circle"></div>
+        <div class="side">
+          <div class="face0"></div>
+          <div class="face1"></div>
+          <div class="face2"></div>
+          <div class="face3"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <button id="recipeBtn">
+      <img src="./media/menu.png" width="150">
+    </button>
+
+    <div id="recipeModal" class="modal">
+      <div class="card">
+        <div class="header">
+        </div>
+        <div class="text">
+           <h1 class="food"></h1>
+           <i class="fa fa-clock-o"></i>
+           <i class="fa fa-users"></i>
+           <h2 class="info"><hr />Ingredients:</h2>
+           <p class="info">
+            <ul class="info scroll"></ul>
+          </p>
+        </div>
+        <a href="#" class="btn close">Close</a>
+     </div>
+    </div>
+
+    <div id="check">
+      <a href="../index.html"><img src="media/check.png" width="200"/></a>
+    </div>
+
+    <audio controls autoplay loop id="bgm">
+      <source src="./media/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
